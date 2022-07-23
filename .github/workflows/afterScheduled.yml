@@ -1,0 +1,18 @@
+name: After Scheduled
+
+on: 
+  workflow_run:
+    workflows: ["Scheduled"]
+    types: 
+      - completed
+
+jobs: 
+  using-schedule-workflows:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show a message
+        run: echo "Acabou o Scheduled"
+      - name: Multiple commands
+        run: |
+          node -v
+          npm -v
