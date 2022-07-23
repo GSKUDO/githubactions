@@ -1,7 +1,7 @@
 name: Scheduled
 on:
   schedule:
-    - cron:  '24 20,13 * * *'
+    - cron:  '28 20,13 * * *'
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
