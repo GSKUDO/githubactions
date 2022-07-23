@@ -1,0 +1,8 @@
+name: learn-github-actions
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show a message
+        run: echo "Ola! Funcionou!!!"
