@@ -1,0 +1,14 @@
+name: Scheduled
+on:
+  schedule:
+    - cron:  '24 20,13 * * *'
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show a message
+        run: echo "Está na hora, vamo embora, vamo embora..."
+      - name: Multiple commands
+        run: |
+          node -v
+          npm -v
