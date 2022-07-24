@@ -1,13 +1,11 @@
 name: Label auto-merge PRs
 
 on:
-  pull_request_target:
-    types: [ auto_merge_enabled, auto_merge_disabled ]
+  pull_request:
+    tags: automerge
 jobs:
-  add_remove_labels:
+  check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: ubuntudroid/automerge-labeler@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          label: 'auto-merge' 
+      - name: Show a message
+        run: echo "Mergeou com sucesso!!"
